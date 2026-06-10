@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Mindful Crafts</title>
+  <meta name="description" content="Browse our full collection of mindful DIY craft kits, journals, and activity boxes for children and adults." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="logo-icon">🌿</div><span>Mindful <em>Crafts</em></span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="blog.html">Blog</a>
+      <a href="wellness.html">Wellness</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-icon-btn">🔍</button>
+      <button class="nav-icon-btn" onclick="openCart()">🛒 <span class="cart-count" style="display:none">0</span></button>
+    </div>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Shop</span></div>
+    <h1>Our Craft Collections</h1>
+    <p>Discover 50+ thoughtfully curated kits for screen-free creativity and mindful living.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="shop-layout">
+
+    <!-- Filters -->
+    <aside class="shop-filters">
+      <div class="filter-card">
+        <h4>Categories</h4>
+        <label class="filter-option"><input type="checkbox" checked /> All Products</label>
+        <label class="filter-option"><input type="checkbox" /> DIY Casting Kits</label>
+        <label class="filter-option"><input type="checkbox" /> Animal Craft Kits</label>
+        <label class="filter-option"><input type="checkbox" /> Paint & Create</label>
+        <label class="filter-option"><input type="checkbox" /> Family Activity Kits</label>
+        <label class="filter-option"><input type="checkbox" /> Mindfulness Journals</label>
+        <label class="filter-option"><input type="checkbox" /> Creative Hobby Kits</label>
+      </div>
+      <div class="filter-card">
+        <h4>Age Group</h4>
+        <label class="filter-option"><input type="checkbox" /> Ages 5–8</label>
+        <label class="filter-option"><input type="checkbox" /> Ages 9–12</label>
+        <label class="filter-option"><input type="checkbox" /> Ages 13–15</label>
+        <label class="filter-option"><input type="checkbox" /> Adults</label>
+        <label class="filter-option"><input type="checkbox" /> All Ages / Family</label>
+      </div>
+      <div class="filter-card">
+        <h4>Price Range</h4>
+        <div class="price-range">
+          <input type="range" min="0" max="2000" value="2000" oninput="document.getElementById('priceVal').textContent='₹'+this.value" />
+          <div class="price-labels"><span>₹0</span><span id="priceVal">₹2000</span></div>
+        </div>
+      </div>
+      <div class="filter-card">
+        <h4>Rating</h4>
+        <label class="filter-option"><input type="checkbox" /> ★★★★★ (5 stars)</label>
+        <label class="filter-option"><input type="checkbox" /> ★★★★☆ (4+ stars)</label>
+        <label class="filter-option"><input type="checkbox" /> ★★★☆☆ (3+ stars)</label>
+      </div>
+      <button class="btn btn-outline" style="width:100%">Apply Filters</button>
+    </aside>
+
+    <!-- Products -->
+    <main class="shop-main">
+      <div class="shop-toolbar">
+        <p class="shop-results">Showing <strong>24 products</strong></p>
+        <div style="display:flex;gap:12px;align-items:center">
+          <div class="shop-sort">
+            <select>
+              <option>Sort: Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest First</option>
+              <option>Best Sellers</option>
+              <option>Highest Rated</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop-grid">
+        <!-- Row 1 -->
+        <div class="product-card" onclick="location.href='product.html'">
+          <div class="product-img">🌺<div class="product-badge">Best Seller</div><button class="product-wishlist">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">DIY Casting Kit</div>
+            <h3 class="product-name">DIY Flower Casting Kit</h3>
+            <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(312)</span></div>
+            <div class="product-footer"><span class="product-price"><del>₹1,199</del> ₹849</span>
+              <button class="add-cart" onclick="event.stopPropagation();addToCart('DIY Flower Casting Kit',849,'🌺')">+</button></div>
+          </div>
+        </div>
+        <div class="product-card" onclick="location.href='product.html'">
+          <div class="product-img" style="background:linear-gradient(135deg,#ddb99a,#f0d4bc)">🐾<div class="product-badge">New</div><button class="product-wishlist">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Animal Craft Kit</div>
+            <h3 class="product-name">Safari Animal Craft Kit</h3>
+            <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(186)</span></div>
+            <div class="product-footer"><span class="product-price">₹749</span>
+              <button class="add-cart" onclick="event.stopPropagation();addToCart('Safari Animal Craft Kit',749,'🐾')">+</button></div>
+          </div>
+        </div>
+        <div class="product-card" onclick="location.href='product.html'">
+          <div class="product-img" style="background:linear-gradient(135deg,#c8b4a8,#e0d0c8)">🎨<button class="product-wishlist">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Paint & Create</div>
+            <h3 class="product-name">Watercolour Zen Kit</h3>
+            <div class="product-rating"><span class="stars">★★★★☆</span><span class="rating-count">(94)</span></div>
+            <div class="product-footer"><span class="product-price"><del>₹1,099</del> ₹799</span>
+              <button class="add-cart" onclick="event.stopPropagation();addToCart('Watercolour Zen Kit',799,'🎨')">+</button></div>
+          </div>
+        </div>
+        <!-- Row 2 -->
+        <div class="product-card" onclick="location.href='product.html'">
+          <div class="product-img" style="background:linear-gradient(135deg,#b8d4b4,#d4ead0)">📓<div class="product-badge" style="background:var(--sage)">Popular</div><button class="product-wishlist">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Mindfulness Journal</div>
+            <h3 class="product-name">Daily Mindfulness Journal</h3>
+            <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(428)</span></div>
+            <div class="product-footer"><span class="product-price">₹499</span>
+              <button class="add-cart" onclick="event.stopPropagation();addToCart('Daily Mindfulness Journal',499,'📓')">+</button></div>
+          </div>
+        </div>
+        <div class="product-card" onclick="location.href='product.html'">
+          <div class="product-img" style="background:linear-gradient(135deg,#e8d4c8,#f5e4d8)">🏺<button class="product-wishlist">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">DIY Casting Kit</div>
+            <h3 class="product-name">Clay Pot Casting Kit</h3>
+            <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(207)</span></div>
+            <div class="product-footer"><span class="product-price">₹899</span>
+              <button class="add-cart" onclick="event.stopPropagation();addToCart('Clay Pot Casting Kit',899,'🏺')">+</button></div>
+          </div>
+        </div>
+        <div class="product-card" onclick="location.href='product.html'">
+          <div class="product-img" style="background:linear-gradient(135deg,#d4c8e8,#ead8f5)">🦋<div class="product-badge">New</div><button class="product-wishlist">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Animal Craft Kit</div>
+            <h3 class="product-name">Butterfly Garden Kit</h3>
+            <div class="product-rating"><span class="stars">★★★★☆</span><span class="rating-count">(63)</span></div>
+            <div class="product-footer"><span class="product-price">₹699</span>
+              <button class="add-cart" onclick="event.stopPropagation();addToCart('Butterfly Garden Kit',699,'🦋')">+</button></div>
+          </div>
+        </div>
+        <!-- Row 3 -->
+        <div class="product-card" onclick="location.href='product.html'">
+          <div class="product-img" style="background:linear-gradient(135deg,#c8d4c0,#dce8d4)">👨‍👩‍👧<div class="product-badge" style="background:var(--soft-brown)">Family</div><button class="product-wishlist">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Family Activity Kit</div>
+            <h3 class="product-name">Family Craft Weekend Box</h3>
+            <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(341)</span></div>
+            <div class="product-footer"><span class="product-price"><del>₹1,899</del> ₹1,499</span>
+              <button class="add-cart" onclick="event.stopPropagation();addToCart('Family Craft Weekend Box',1499,'👨‍👩‍👧')">+</button></div>
+          </div>
+        </div>
+        <div class="product-card" onclick="location.href='product.html'">
+          <div class="product-img" style="background:linear-gradient(135deg,#e8c8b4,#f5d8c4)">🕯️<button class="product-wishlist">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Creative Hobby Kit</div>
+            <h3 class="product-name">Soy Candle Making Kit</h3>
+            <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(189)</span></div>
+            <div class="product-footer"><span class="product-price">₹1,099</span>
+              <button class="add-cart" onclick="event.stopPropagation();addToCart('Soy Candle Making Kit',1099,'🕯️')">+</button></div>
+          </div>
+        </div>
+        <div class="product-card" onclick="location.href='product.html'">
+          <div class="product-img" style="background:linear-gradient(135deg,#b4d4c8,#c8e8dc)">🌱<div class="product-badge">Eco</div><button class="product-wishlist">♡</button></div>
+          <div class="product-info">
+            <div class="product-category">Creative Hobby Kit</div>
+            <h3 class="product-name">Terrarium Building Kit</h3>
+            <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(124)</span></div>
+            <div class="product-footer"><span class="product-price">₹949</span>
+              <button class="add-cart" onclick="event.stopPropagation();addToCart('Terrarium Building Kit',949,'🌱')">+</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div style="display:flex;justify-content:center;gap:8px;margin-top:48px">
+        <button class="btn btn-primary btn-sm">1</button>
+        <button class="btn btn-outline btn-sm">2</button>
+        <button class="btn btn-outline btn-sm">3</button>
+        <button class="btn btn-outline btn-sm">Next →</button>
+      </div>
+    </main>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap"><div class="logo-icon">🌿</div><span>Mindful Crafts</span></div>
+        <p>Helping families reduce screen time through the joy of hands-on creativity and mindfulness.</p>
+        <div class="tagline">"Less Screen. More Life."</div>
+        <div class="footer-socials">
+          <a href="#" class="social-btn">📸</a><a href="#" class="social-btn">👥</a>
+          <a href="#" class="social-btn">▶️</a><a href="#" class="social-btn">📌</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul>
+        <li><a href="shop.html">All Products</a></li><li><a href="shop.html">DIY Craft Kits</a></li>
+        <li><a href="shop.html">Family Kits</a></li><li><a href="shop.html">Journals</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Explore</h4><ul>
+        <li><a href="blog.html">Blog</a></li><li><a href="wellness.html">Wellness</a></li>
+        <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Support</h4><ul>
+        <li><a href="#">Order Tracking</a></li><li><a href="#">Returns</a></li>
+        <li><a href="#">Privacy Policy</a></li><li><a href="#">Terms</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Mindful Crafts. Made with <span class="heart">❤️</span> in India.</p></div>
+  </div>
+</footer>
+
+<div class="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer">
+  <div class="cart-head"><h3>🛒 Your Cart</h3><button class="cart-close" onclick="closeCart()">×</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Total</span><span class="cart-total-amount">₹0</span></div>
+    <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="showToast('🔜 Checkout coming soon!')">Checkout →</button>
+  </div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
