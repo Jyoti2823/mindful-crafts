@@ -150,7 +150,7 @@ export default function AccountPage() {
                     </div>
                     <div>
                       <label className="text-xs font-semibold text-brown/60 mb-1.5 block">Phone Number</label>
-                      <input className="input w-full" placeholder="+91 98765 43210" />
+                      <input className="input w-full" placeholder="+91 9910268854" />
                     </div>
                     <div>
                       <label className="text-xs font-semibold text-brown/60 mb-1.5 block">Date of Birth</label>
