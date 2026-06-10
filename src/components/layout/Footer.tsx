@@ -1,37 +1,28 @@
 import Link from 'next/link'
 
 const shopLinks = [
-  { label: 'All Products', href: '/shop' },
-  { label: 'DIY Casting Kits', href: '/shop' },
-  { label: 'Family Activity Kits', href: '/shop' },
-  { label: 'Mindfulness Journals', href: '/shop' },
-  { label: 'Paint & Create', href: '/shop' },
-  { label: 'Gift Sets', href: '/shop' },
+  { label: 'All Products',        href: '/shop' },
+  { label: 'DIY Casting Kits',    href: '/shop' },
+  { label: 'Family Activity Kits',href: '/shop' },
+  { label: 'Mindfulness Journals',href: '/shop' },
+  { label: 'Paint & Create',      href: '/shop' },
 ]
 
 const exploreLinks = [
-  { label: 'Blog', href: '/blog' },
-  { label: 'Wellness Resources', href: '/wellness' },
-  { label: 'Our Story', href: '/about' },
-  { label: 'Contact Us', href: '/contact' },
-  { label: 'Workshops (Soon)', href: '#' },
-  { label: 'Community (Soon)', href: '#' },
+  { label: 'Blog',                href: '/blog' },
+  { label: 'Wellness Resources',  href: '/wellness' },
+  { label: 'Our Story',           href: '/about' },
+  { label: 'Contact Us',          href: '/contact' },
+  { label: 'Workshops — Coming Soon', href: '#', muted: true },
 ]
 
 const supportLinks = [
-  { label: 'Order Tracking', href: '#' },
-  { label: 'Returns & Refunds', href: '#' },
-  { label: 'Shipping Policy', href: '#' },
-  { label: 'Privacy Policy', href: '#' },
-  { label: 'Terms of Service', href: '#' },
-  { label: 'Help Center', href: '/contact' },
-]
-
-const socials = [
-  { label: 'Instagram', icon: '📸', href: '#' },
-  { label: 'Facebook', icon: '👥', href: '#' },
-  { label: 'YouTube', icon: '▶️', href: '#' },
-  { label: 'Pinterest', icon: '📌', href: '#' },
+  { label: 'Order Tracking',   href: '/account' },
+  { label: 'Returns & Refunds',href: '/policies/returns' },
+  { label: 'Shipping Policy',  href: '/policies/shipping' },
+  { label: 'Privacy Policy',   href: '/policies/privacy' },
+  { label: 'Terms of Service', href: '/policies/terms' },
+  { label: 'Help Center',      href: '/contact' },
 ]
 
 export default function Footer() {
@@ -42,9 +33,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 bg-sage rounded-xl flex items-center justify-center text-base">
-                🌿
-              </div>
+              <div className="w-9 h-9 bg-sage rounded-xl flex items-center justify-center text-base">🌿</div>
               <span className="font-playfair text-lg font-bold text-white">
                 Mind<em className="text-sage-300 not-italic">Shant</em>
               </span>
@@ -53,18 +42,23 @@ export default function Footer() {
               Helping families reduce screen time through the joy of hands-on creativity, mindfulness, and meaningful offline experiences.
             </p>
             <p className="text-xs text-sage-300 italic mb-5">&quot;Less Screen. More Life.&quot;</p>
+            {/* Social — placeholder until real accounts created */}
             <div className="flex gap-2">
-              {socials.map((s) => (
-                <a
+              {[
+                { label: 'Instagram', icon: '📸' },
+                { label: 'Facebook',  icon: '👥' },
+                { label: 'YouTube',   icon: '▶️' },
+              ].map((s) => (
+                <span
                   key={s.label}
-                  href={s.href}
-                  aria-label={s.label}
-                  className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center text-sm hover:bg-sage transition-all duration-200"
+                  title={`${s.label} — Coming Soon`}
+                  className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center text-sm opacity-40 cursor-not-allowed"
                 >
                   {s.icon}
-                </a>
+                </span>
               ))}
             </div>
+            <p className="text-[10px] text-white/30 mt-2">Social accounts coming soon</p>
           </div>
 
           {/* Shop */}
@@ -87,9 +81,13 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {exploreLinks.map((l) => (
                 <li key={l.label}>
-                  <Link href={l.href} className="text-sm hover:text-sage-300 transition-colors">
-                    {l.label}
-                  </Link>
+                  {l.muted ? (
+                    <span className="text-sm text-white/25 cursor-not-allowed">{l.label}</span>
+                  ) : (
+                    <Link href={l.href} className="text-sm hover:text-sage-300 transition-colors">
+                      {l.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -117,11 +115,9 @@ export default function Footer() {
             <span className="text-terracotta-300">❤️</span> in India.
           </p>
           <div className="flex gap-5">
-            {['Privacy', 'Terms', 'Sitemap'].map((l) => (
-              <a key={l} href="#" className="text-xs hover:text-sage-300 transition-colors">
-                {l}
-              </a>
-            ))}
+            <Link href="/policies/privacy" className="text-xs hover:text-sage-300 transition-colors">Privacy</Link>
+            <Link href="/policies/terms"   className="text-xs hover:text-sage-300 transition-colors">Terms</Link>
+            <Link href="/policies/shipping" className="text-xs hover:text-sage-300 transition-colors">Shipping</Link>
           </div>
         </div>
       </div>
