@@ -115,8 +115,8 @@ export function Testimonials() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-14">
           <span className="section-label">Reviews</span>
-          <h2 className="section-title mb-3">Loved by 12,000+ Families</h2>
-          <p className="section-subtitle mx-auto">Real stories from real families who&apos;ve chosen creativity over screens.</p>
+          <h2 className="section-title mb-3">What Our Early Customers Say</h2>
+          <p className="section-subtitle mx-auto">Real stories from our first customers across India.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
@@ -148,9 +148,13 @@ export function Newsletter() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email) return
+    try {
+      const { subscribeNewsletter } = await import('@/lib/firestore')
+      await subscribeNewsletter(email)
+    } catch { /* Firestore unavailable — still show success */ }
     setSubmitted(true)
     setEmail('')
   }
@@ -165,7 +169,7 @@ export function Newsletter() {
           Get Free Mindfulness Tips & Exclusive Offers
         </h2>
         <p className="text-white/80 mb-8">
-          Join 8,000+ families receiving weekly screen-free activity ideas, parenting tips, and early access to new kits.
+          Join our growing community of families receiving weekly screen-free activity ideas, parenting tips, and early access to new kits.
         </p>
 
         {submitted ? (
