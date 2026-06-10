@@ -115,21 +115,15 @@ export default function ProductDetailClient({ product }: { product: Product }) {
 
           <div className="mt-16">
             <h2 className="font-playfair font-bold text-2xl mb-6">Customer Reviews</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {[
-                { name: 'Meera Iyer', role: 'Verified · Delhi', emoji: '👩', text: 'My daughter and I spent a whole Sunday making these. Beautiful result on our living room wall!' },
-                { name: 'Rahul Gupta', role: 'Verified · Pune', emoji: '👨', text: 'Excellent quality. Clear instructions, everything included. No extra shopping required.' },
-                { name: 'Sunita Rao', role: 'Verified · Hyderabad', emoji: '👩', text: 'Ordered as a birthday gift. She loved it so much she asked for two more kits!' },
-              ].map((r, i) => (
-                <div key={i} className="card p-6">
-                  <div className="text-amber-400 mb-2">★★★★★</div>
-                  <p className="text-sm text-brown/70 italic leading-relaxed mb-4">&ldquo;{r.text}&rdquo;</p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-sage-200 to-beige flex items-center justify-center text-lg">{r.emoji}</div>
-                    <div><p className="font-semibold text-sm text-brown-dark">{r.name}</p><p className="text-xs text-brown/40">{r.role}</p></div>
-                  </div>
-                </div>
-              ))}
+            <div className="bg-beige rounded-3xl p-10 text-center">
+              <div className="text-5xl mb-4">⭐</div>
+              <h3 className="font-playfair font-bold text-xl mb-2">Be the First to Review!</h3>
+              <p className="text-sm text-brown/60 mb-6 max-w-md mx-auto">
+                Bought this kit? We would love to hear what you and your family thought. Your honest review helps other families make the right choice.
+              </p>
+              <a href="mailto:jyotikumari9381@gmail.com?subject=Product Review" className="btn-primary btn-sm inline-flex">
+                ✉️ Send Your Review
+              </a>
             </div>
           </div>
 
