@@ -62,11 +62,6 @@ export default function LoginPage() {
           </div>
 
           <div className="px-8 py-8">
-            {!isFirebaseReady && (
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6 text-sm text-amber-800">
-                ⚠️ Firebase not configured. Add your <code className="bg-amber-100 px-1 rounded">.env.local</code> credentials to enable authentication.
-              </div>
-            )}
 
             {error && (
               <div className="bg-red-50 border border-red-200 rounded-xl p-3 mb-5 text-sm text-red-700">
@@ -103,8 +98,8 @@ export default function LoginPage() {
                 </button>
               </div>
 
-              <button type="submit" disabled={loading || !isFirebaseReady}
-                className="btn-primary w-full justify-center disabled:opacity-50 disabled:cursor-not-allowed">
+              <button type="submit" disabled={loading}
+                className="btn-primary w-full justify-center">
                 {loading ? '⏳ Signing in...' : 'Sign In →'}
               </button>
             </form>
@@ -118,8 +113,8 @@ export default function LoginPage() {
               </div>
             </div>
 
-            <button onClick={handleGoogle} disabled={loading || !isFirebaseReady}
-              className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-xl border-[1.5px] border-beige-400 hover:border-sage-300 hover:bg-beige transition-all text-sm font-medium text-brown disabled:opacity-50 disabled:cursor-not-allowed">
+            <button onClick={handleGoogle} disabled={loading}
+              className="w-full flex items-center justify-center gap-3 px-4 py-3 rounded-xl border-[1.5px] border-beige-400 hover:border-sage-300 hover:bg-beige transition-all text-sm font-medium text-brown">
               <span className="text-xl">G</span> Continue with Google
             </button>
 
