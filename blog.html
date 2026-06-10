@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Mindful Crafts | Digital Detox, Mindfulness & Family Activities</title>
+  <meta name="description" content="Expert insights on reducing screen time, digital detox, mindfulness activities, and creative hobbies for the whole family." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><div class="logo-icon">🌿</div><span>Mindful <em>Crafts</em></span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a><a href="shop.html">Shop</a>
+    <a href="blog.html" class="active">Blog</a><a href="wellness.html">Wellness</a>
+    <a href="about.html">About</a><a href="contact.html">Contact</a>
+  </div>
+  <div class="nav-actions">
+    <button class="nav-icon-btn">🔍</button>
+    <button class="nav-icon-btn" onclick="openCart()">🛒 <span class="cart-count" style="display:none">0</span></button>
+  </div>
+  <button class="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Blog</span></div>
+    <h1>Mindful Living Blog</h1>
+    <p>Insights on digital wellness, screen-free living, mindfulness, and creative activities for the whole family.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="blog-layout">
+    <main>
+      <!-- Featured Post -->
+      <div class="blog-featured">
+        <a href="#" class="blog-featured-card">
+          <div class="blog-featured-img">📵</div>
+          <div class="blog-featured-body">
+            <span class="blog-tag">Featured · Digital Detox</span>
+            <h2>7 Signs Your Child May Have a Screen Addiction (And What To Do About It)</h2>
+            <p>Screen addiction is more common than most parents realise. Learn to identify the warning signs and discover gentle, effective strategies to restore a healthy digital balance in your family.</p>
+            <div class="blog-meta" style="margin-bottom:20px"><span>📅 June 5, 2025</span><span>⏱ 5 min read</span><span>👤 Jyoti Founder</span></div>
+            <a href="#" class="btn btn-primary btn-sm">Read Full Article →</a>
+          </div>
+        </a>
+      </div>
+
+      <!-- Article Grid -->
+      <h3 style="font-size:1.2rem;margin-bottom:24px;font-family:'Inter',sans-serif;font-weight:700;color:var(--text-medium);text-transform:uppercase;letter-spacing:0.06em">Latest Articles</h3>
+      <div class="blog-grid">
+        <a href="#" class="blog-card">
+          <div class="blog-img">🧘</div>
+          <div class="blog-body">
+            <span class="blog-tag">Mindfulness</span>
+            <h3 class="blog-title">How 20 Minutes of Crafting Can Transform Your Mental Health</h3>
+            <p class="blog-excerpt">Science shows that creative activities activate the brain's reward system, reducing cortisol and boosting dopamine.</p>
+            <div class="blog-meta"><span>📅 May 28, 2025</span><span>⏱ 4 min</span></div>
+            <div class="read-more">Read Article →</div>
+          </div>
+        </a>
+        <a href="#" class="blog-card">
+          <div class="blog-img" style="background:linear-gradient(135deg,#c8d4c0,#dce8d4)">👨‍👩‍👧</div>
+          <div class="blog-body">
+            <span class="blog-tag">Family Activities</span>
+            <h3 class="blog-title">10 Weekend Activities for Families That Don't Involve Screens</h3>
+            <p class="blog-excerpt">Fun, affordable, and screen-free activities you can do at home this weekend that the whole family will love.</p>
+            <div class="blog-meta"><span>📅 May 20, 2025</span><span>⏱ 6 min</span></div>
+            <div class="read-more">Read Article →</div>
+          </div>
+        </a>
+        <a href="#" class="blog-card">
+          <div class="blog-img" style="background:linear-gradient(135deg,#e8c8b4,#f5d8c4)">💡</div>
+          <div class="blog-body">
+            <span class="blog-tag">Productivity</span>
+            <h3 class="blog-title">The Deep Work Ritual: How Craft Breaks Make You More Productive</h3>
+            <p class="blog-excerpt">Top performers are replacing doom-scrolling with creative breaks. Here's the science behind why it works.</p>
+            <div class="blog-meta"><span>📅 May 14, 2025</span><span>⏱ 5 min</span></div>
+            <div class="read-more">Read Article →</div>
+          </div>
+        </a>
+        <a href="#" class="blog-card">
+          <div class="blog-img" style="background:linear-gradient(135deg,#d4c8e8,#ead8f5)">🧠</div>
+          <div class="blog-body">
+            <span class="blog-tag">Mental Wellness</span>
+            <h3 class="blog-title">Art Therapy at Home: Using Crafts to Process Emotions</h3>
+            <p class="blog-excerpt">Simple craft activities that help children and adults identify, express, and process complex emotions.</p>
+            <div class="blog-meta"><span>📅 May 8, 2025</span><span>⏱ 7 min</span></div>
+            <div class="read-more">Read Article →</div>
+          </div>
+        </a>
+        <a href="#" class="blog-card">
+          <div class="blog-img" style="background:linear-gradient(135deg,#b8d4b4,#d4ead0)">🌱</div>
+          <div class="blog-body">
+            <span class="blog-tag">Screen Addiction</span>
+            <h3 class="blog-title">India's Screen Time Crisis: What the Numbers Say About Our Kids</h3>
+            <p class="blog-excerpt">A look at the data on screen usage among Indian children and what families can do to reverse the trend.</p>
+            <div class="blog-meta"><span>📅 April 30, 2025</span><span>⏱ 6 min</span></div>
+            <div class="read-more">Read Article →</div>
+          </div>
+        </a>
+        <a href="#" class="blog-card">
+          <div class="blog-img" style="background:linear-gradient(135deg,#ddb99a,#f0d4bc)">🎨</div>
+          <div class="blog-body">
+            <span class="blog-tag">Creative Hobbies</span>
+            <h3 class="blog-title">Beginner's Guide to Plaster Casting: Everything You Need to Know</h3>
+            <p class="blog-excerpt">A complete beginner's introduction to plaster casting — the most satisfying craft you haven't tried yet.</p>
+            <div class="blog-meta"><span>📅 April 22, 2025</span><span>⏱ 8 min</span></div>
+            <div class="read-more">Read Article →</div>
+          </div>
+        </a>
+      </div>
+
+      <div style="text-align:center;margin-top:40px">
+        <button class="btn btn-outline">Load More Articles →</button>
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside>
+      <div class="blog-sidebar-card">
+        <h4>Popular Posts</h4>
+        <div class="sidebar-post"><div class="sidebar-post-img">📵</div><div><h5>7 Signs of Screen Addiction in Children</h5><span>5,240 reads</span></div></div>
+        <div class="sidebar-post"><div class="sidebar-post-img">🧘</div><div><h5>Craft Therapy for Mental Health</h5><span>3,810 reads</span></div></div>
+        <div class="sidebar-post"><div class="sidebar-post-img">👨‍👩‍👧</div><div><h5>10 Screen-Free Weekend Activities</h5><span>2,960 reads</span></div></div>
+      </div>
+
+      <div class="blog-sidebar-card">
+        <h4>Topics</h4>
+        <div class="tag-cloud">
+          <a href="#">Digital Detox</a><a href="#">Screen Addiction</a>
+          <a href="#">Mindfulness</a><a href="#">Family Activities</a>
+          <a href="#">Mental Wellness</a><a href="#">Creative Hobbies</a>
+          <a href="#">Productivity</a><a href="#">Parenting</a>
+          <a href="#">Child Development</a><a href="#">DIY Crafts</a>
+        </div>
+      </div>
+
+      <div class="blog-sidebar-card" style="background:var(--sage);color:white;border-color:var(--sage)">
+        <h4 style="color:rgba(255,255,255,0.8)">Newsletter</h4>
+        <p style="font-size:0.85rem;color:rgba(255,255,255,0.85);margin-bottom:14px">Get weekly screen-free tips & early access to new kits.</p>
+        <input type="email" placeholder="Your email..." style="width:100%;padding:10px 14px;border-radius:8px;border:none;margin-bottom:10px;font-family:inherit;font-size:0.88rem" />
+        <button class="btn btn-terracotta" style="width:100%;justify-content:center">Subscribe →</button>
+      </div>
+
+      <div class="blog-sidebar-card">
+        <h4>Featured Products</h4>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <a href="product.html" style="display:flex;gap:12px;align-items:center;padding:10px;background:var(--beige);border-radius:8px;transition:var(--transition)" onmouseover="this.style.background='var(--beige-dark)'" onmouseout="this.style.background='var(--beige)'">
+            <div style="font-size:1.8rem">🌺</div>
+            <div><div style="font-size:0.85rem;font-weight:600">Flower Casting Kit</div><div style="font-size:0.8rem;color:var(--sage-dark)">₹849</div></div>
+          </a>
+          <a href="product.html" style="display:flex;gap:12px;align-items:center;padding:10px;background:var(--beige);border-radius:8px;transition:var(--transition)" onmouseover="this.style.background='var(--beige-dark)'" onmouseout="this.style.background='var(--beige)'">
+            <div style="font-size:1.8rem">📓</div>
+            <div><div style="font-size:0.85rem;font-weight:600">Mindfulness Journal</div><div style="font-size:0.8rem;color:var(--sage-dark)">₹499</div></div>
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo-wrap"><div class="logo-icon">🌿</div><span>Mindful Crafts</span></div><p>Helping families reduce screen time through mindful creativity.</p><div class="tagline">"Less Screen. More Life."</div></div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li><li><a href="shop.html">DIY Kits</a></li></ul></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="wellness.html">Wellness</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="#">Privacy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Mindful Crafts. Made with <span class="heart">❤️</span> in India.</p></div>
+  </div>
+</footer>
+<div class="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer">
+  <div class="cart-head"><h3>🛒 Your Cart</h3><button class="cart-close" onclick="closeCart()">×</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-foot"><div class="cart-total"><span>Total</span><span class="cart-total-amount">₹0</span></div><button class="btn btn-primary" style="width:100%;justify-content:center">Checkout →</button></div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
