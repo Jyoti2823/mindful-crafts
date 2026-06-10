@@ -79,11 +79,14 @@ export default function ProductCard({ product, className }: ProductCardProps) {
 
         {/* Rating */}
         <div className="flex items-center gap-1.5 mb-3">
-          <span className="text-amber-400 text-xs leading-none">
-            {'★'.repeat(Math.floor(product.rating))}
-            {product.rating % 1 >= 0.5 ? '☆' : ''}
-          </span>
-          <span className="text-xs text-brown/50">({product.reviewCount})</span>
+          {product.reviewCount > 0 ? (
+            <>
+              <span className="text-amber-400 text-xs leading-none">{'★'.repeat(Math.floor(product.rating))}</span>
+              <span className="text-xs text-brown/50">({product.reviewCount})</span>
+            </>
+          ) : (
+            <span className="text-xs text-sage-600 font-medium">New arrival ✦</span>
+          )}
         </div>
 
         {/* Price + Add */}
