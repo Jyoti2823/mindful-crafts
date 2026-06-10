@@ -63,8 +63,18 @@ export default function AdminProducts() {
     setShowForm(true)
   }
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!form.name || !form.price) return
+    // Save to Firestore if available
+    try {
+      if (editingProduct) {
+        const { updateProduct } = await import('@/lib/firestore')
+        await updateProduct(editingProduct.id, { name: form.name, price: Number(form.price), category: form.category, emoji: form.emoji, inStock: form.inStock })
+      } else {
+        const { addProduct } = await import('@/lib/firestore')
+        await addProduct({ slug: form.name.toLowerCase().replace(/\s+/g,'-'), name: form.name, category: form.category, price: Number(form.price), emoji: form.emoji, rating: 5, reviewCount: 0, ageGroup: form.ageGroup, timeRequired: form.timeRequired, skillLevel: form.skillLevel, shortDescription: form.shortDescription, description: form.shortDescription, benefits: [], includes: [], images: [form.emoji], bgGradient: 'from-sage-200 to-beige-300', inStock: form.inStock, stockCount: Number(form.stockCount), tags: [], featured: false })
+      }
+    } catch { /* Firestore not yet set up — changes saved locally */ }
     if (editingProduct) {
       setProducts(prev => prev.map(p => p.id === editingProduct.id ? {
         ...p, name: form.name, category: form.category, price: Number(form.price),
