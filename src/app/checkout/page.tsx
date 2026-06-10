@@ -146,7 +146,7 @@ export default function CheckoutPage() {
                   </div>
                   <div className="col-span-2 sm:col-span-1">
                     <label className="text-xs font-semibold text-brown/60 mb-1.5 block">Phone Number *</label>
-                    <input type="tel" className="input w-full" placeholder="+91 98765 43210" value={address.phone} onChange={e => setAddress({...address, phone: e.target.value})} required />
+                    <input type="tel" className="input w-full" placeholder="+91 9910268854" value={address.phone} onChange={e => setAddress({...address, phone: e.target.value})} required />
                   </div>
                   <div className="col-span-2">
                     <label className="text-xs font-semibold text-brown/60 mb-1.5 block">Address Line 1 *</label>
