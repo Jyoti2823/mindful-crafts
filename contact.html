@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Mindful Crafts</title>
+  <meta name="description" content="Get in touch with the Mindful Crafts team. We're here to help with orders, partnerships, and any questions." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><div class="logo-icon">🌿</div><span>Mindful <em>Crafts</em></span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a><a href="shop.html">Shop</a>
+    <a href="blog.html">Blog</a><a href="wellness.html">Wellness</a>
+    <a href="about.html">About</a><a href="contact.html" class="active">Contact</a>
+  </div>
+  <div class="nav-actions">
+    <button class="nav-icon-btn">🔍</button>
+    <button class="nav-icon-btn" onclick="openCart()">🛒 <span class="cart-count" style="display:none">0</span></button>
+  </div>
+  <button class="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact</span></div>
+    <h1>Get In Touch</h1>
+    <p>We'd love to hear from you. Our team typically responds within 24 hours.</p>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <h2>We're Here to Help</h2>
+        <p>Whether you have a question about our products, need help with an order, or want to explore partnership opportunities — we're here.</p>
+        <div class="contact-method">
+          <div class="contact-icon">📧</div>
+          <div><h4>Email Us</h4><p>hello@mindfulcrafts.in</p><p style="font-size:0.78rem;margin-top:2px;color:var(--text-light)">Response within 24 hours</p></div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-icon">📱</div>
+          <div><h4>WhatsApp</h4><p>+91 98765 43210</p><p style="font-size:0.78rem;margin-top:2px;color:var(--text-light)">Mon–Sat, 10am–6pm IST</p></div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-icon">📍</div>
+          <div><h4>Our Office</h4><p>Sector 12, Noida, Uttar Pradesh</p><p style="font-size:0.78rem;margin-top:2px;color:var(--text-light)">Delhi NCR, India</p></div>
+        </div>
+
+        <div style="margin-top:32px">
+          <h4 style="font-size:0.88rem;font-family:'Inter',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-medium);margin-bottom:14px">Follow Us</h4>
+          <div style="display:flex;gap:10px">
+            <a href="#" class="social-btn" style="width:44px;height:44px;border-radius:10px;background:var(--beige);display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:var(--transition)" onmouseover="this.style.background='var(--sage)'" onmouseout="this.style.background='var(--beige)'">📸</a>
+            <a href="#" class="social-btn" style="width:44px;height:44px;border-radius:10px;background:var(--beige);display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:var(--transition)" onmouseover="this.style.background='var(--sage)'" onmouseout="this.style.background='var(--beige)'">👥</a>
+            <a href="#" class="social-btn" style="width:44px;height:44px;border-radius:10px;background:var(--beige);display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:var(--transition)" onmouseover="this.style.background='var(--sage)'" onmouseout="this.style.background='var(--beige)'">▶️</a>
+            <a href="#" class="social-btn" style="width:44px;height:44px;border-radius:10px;background:var(--beige);display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:var(--transition)" onmouseover="this.style.background='var(--sage)'" onmouseout="this.style.background='var(--beige)'">📌</a>
+          </div>
+        </div>
+
+        <!-- Quick FAQ -->
+        <div style="margin-top:40px;background:var(--beige);border-radius:var(--radius-lg);padding:24px">
+          <h4 style="font-size:0.95rem;margin-bottom:16px">Quick Answers</h4>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="font-size:0.85rem"><strong>🚚 Shipping time?</strong><br><span style="color:var(--text-light)">3–5 business days across India.</span></div>
+            <div style="font-size:0.85rem"><strong>↩️ Return policy?</strong><br><span style="color:var(--text-light)">30 days, no questions asked.</span></div>
+            <div style="font-size:0.85rem"><strong>🎁 Bulk orders?</strong><br><span style="color:var(--text-light)">Yes! Contact us for school & corporate orders.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h3 style="font-size:1.4rem;margin-bottom:8px">Send Us a Message</h3>
+        <p style="color:var(--text-light);font-size:0.88rem;margin-bottom:28px">Fill in the form below and we'll get back to you as soon as possible.</p>
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-grid">
+            <div class="form-group"><label>First Name *</label><input type="text" placeholder="Your first name" required /></div>
+            <div class="form-group"><label>Last Name *</label><input type="text" placeholder="Your last name" required /></div>
+            <div class="form-group"><label>Email Address *</label><input type="email" placeholder="your@email.com" required /></div>
+            <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+91 98765 43210" /></div>
+            <div class="form-group full"><label>Subject *</label>
+              <select required>
+                <option value="">Select a topic...</option>
+                <option>Order Issue</option>
+                <option>Product Question</option>
+                <option>Return / Exchange</option>
+                <option>Bulk / Corporate Order</option>
+                <option>Partnership / Collaboration</option>
+                <option>Press / Media</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group full"><label>Message *</label><textarea placeholder="Tell us how we can help you..." required></textarea></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="margin-top:8px">Send Message ✉️</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo-wrap"><div class="logo-icon">🌿</div><span>Mindful Crafts</span></div><p>Helping families reduce screen time through mindful creativity.</p><div class="tagline">"Less Screen. More Life."</div></div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li></ul></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="#">Returns</a></li><li><a href="#">Privacy</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Mindful Crafts. Made with <span class="heart">❤️</span> in India.</p></div>
+  </div>
+</footer>
+<div class="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer">
+  <div class="cart-head"><h3>🛒 Your Cart</h3><button class="cart-close" onclick="closeCart()">×</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-foot"><div class="cart-total"><span>Total</span><span class="cart-total-amount">₹0</span></div><button class="btn btn-primary" style="width:100%;justify-content:center">Checkout →</button></div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
