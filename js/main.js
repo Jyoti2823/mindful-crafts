@@ -31,7 +31,7 @@ function renderCartItems() {
   const container = document.querySelector('.cart-items');
   if (!container) return;
   if (cart.length === 0) {
-    container.innerHTML = `<div class="cart-empty"><div class="icon">🛒</div><p>Your cart is empty</p><p style="font-size:0.82rem;color:var(--text-light);margin-top:6px">Add some mindful crafts!</p></div>`;
+    container.innerHTML = `<div class="cart-empty"><div class="icon">🛒</div><p>Your cart is empty</p><p style="font-size:0.82rem;color:var(--text-light);margin-top:6px">Add some MindShant!</p></div>`;
     document.querySelector('.cart-total-amount').textContent = '₹0';
     return;
   }
