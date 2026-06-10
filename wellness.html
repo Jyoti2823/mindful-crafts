@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wellness Resources — Mindful Crafts</title>
+  <meta name="description" content="Free guides, printable worksheets, screen time reduction tips, mindfulness exercises, and family activities." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+</head>
+<body>
+<nav class="navbar"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><div class="logo-icon">🌿</div><span>Mindful <em>Crafts</em></span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a><a href="shop.html">Shop</a>
+    <a href="blog.html">Blog</a><a href="wellness.html" class="active">Wellness</a>
+    <a href="about.html">About</a><a href="contact.html">Contact</a>
+  </div>
+  <div class="nav-actions">
+    <button class="nav-icon-btn">🔍</button>
+    <button class="nav-icon-btn" onclick="openCart()">🛒 <span class="cart-count" style="display:none">0</span></button>
+  </div>
+  <button class="hamburger"><span></span><span></span><span></span></button>
+</div></nav>
+
+<section class="wellness-hero">
+  <div class="container">
+    <div class="section-label" style="background:rgba(255,255,255,0.15);color:white;margin:0 auto 16px">✦ Free Resources</div>
+    <h1>Your Wellness Resource Hub</h1>
+    <p>Free guides, worksheets, and mindfulness tools to help your family live more intentionally — screen-free.</p>
+  </div>
+</section>
+
+<!-- Free Guides -->
+<section style="background:var(--cream);padding:80px 0">
+  <div class="container">
+    <div class="section-header centered"><div class="section-label">Free Downloads</div><h2 class="section-title">Guides & Printable Worksheets</h2><p class="section-subtitle">Download these free resources to kickstart your family's mindful living journey.</p></div>
+    <div class="resources-grid">
+      <div class="resource-card">
+        <div class="resource-icon">📋</div>
+        <h3>7-Day Screen Detox Plan</h3>
+        <p>A practical, day-by-day plan to gradually reduce screen time without family conflict. Includes conversation starters and alternative activity suggestions.</p>
+        <button class="btn btn-primary btn-sm" onclick="showToast('📧 Guide sent to your email!')">Download Free →</button>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">📝</div>
+        <h3>Mindfulness Colouring Sheets</h3>
+        <p>10 beautifully designed mandala and nature colouring pages for children and adults. Perfect for quiet, meditative activity time.</p>
+        <button class="btn btn-primary btn-sm" onclick="showToast('📧 Sheets sent to your email!')">Download Free →</button>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">📊</div>
+        <h3>Family Screen Time Tracker</h3>
+        <p>A printable weekly tracker to monitor and manage screen time across all family members. Includes a reward chart for children.</p>
+        <button class="btn btn-primary btn-sm" onclick="showToast('📧 Tracker sent to your email!')">Download Free →</button>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">🌙</div>
+        <h3>Bedtime Mindfulness Routine</h3>
+        <p>A calming 20-minute bedtime routine for children that replaces screen time with breathing exercises, gratitude journaling, and guided relaxation.</p>
+        <button class="btn btn-outline btn-sm" onclick="showToast('📧 Routine sent to your email!')">Download Free →</button>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">🎯</div>
+        <h3>Craft Activity Idea Cards</h3>
+        <p>50 printable activity idea cards for spontaneous, no-prep creative activities. Cut them out and draw from a jar whenever boredom strikes!</p>
+        <button class="btn btn-outline btn-sm" onclick="showToast('📧 Cards sent to your email!')">Download Free →</button>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">💬</div>
+        <h3>Parent Conversation Guide</h3>
+        <p>How to talk to your children about screen time without battles. Includes age-appropriate scripts and positive reinforcement strategies.</p>
+        <button class="btn btn-outline btn-sm" onclick="showToast('📧 Guide sent to your email!')">Download Free →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screen Time Tips -->
+<section style="background:var(--beige);padding:80px 0">
+  <div class="container">
+    <div class="section-header centered"><div class="section-label">Expert Tips</div><h2 class="section-title">Screen Time Reduction Tips</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px;margin:0 auto">
+      <div style="background:white;border-radius:var(--radius-lg);padding:28px;border:1px solid var(--border)"><div style="font-size:1.8rem;margin-bottom:12px">🌅</div><h3 style="font-size:1rem;margin-bottom:8px">Create Tech-Free Times</h3><p style="font-size:0.875rem;color:var(--text-light)">Designate specific hours as device-free — meals, the hour before bed, and first thing in the morning. Consistency is key.</p></div>
+      <div style="background:white;border-radius:var(--radius-lg);padding:28px;border:1px solid var(--border)"><div style="font-size:1.8rem;margin-bottom:12px">🧺</div><h3 style="font-size:1rem;margin-bottom:8px">The Phone Basket Method</h3><p style="font-size:0.875rem;color:var(--text-light)">Place a basket at the front door. Everyone — including parents — puts their phone in it when arriving home. Simple and effective.</p></div>
+      <div style="background:white;border-radius:var(--radius-lg);padding:28px;border:1px solid var(--border)"><div style="font-size:1.8rem;margin-bottom:12px">🏆</div><h3 style="font-size:1rem;margin-bottom:8px">Earn Screen Time</h3><p style="font-size:0.875rem;color:var(--text-light)">Instead of restricting screens, have children earn screen time by completing real-world activities like crafts, reading, or chores.</p></div>
+      <div style="background:white;border-radius:var(--radius-lg);padding:28px;border:1px solid var(--border)"><div style="font-size:1.8rem;margin-bottom:12px">📦</div><h3 style="font-size:1rem;margin-bottom:8px">The Boredom Box</h3><p style="font-size:0.875rem;color:var(--text-light)">Create a box filled with activity cards, small craft materials, and games. When kids say they're bored, direct them to the box.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Mindfulness Exercises -->
+<section style="background:var(--cream);padding:80px 0">
+  <div class="container">
+    <div class="section-header centered"><div class="section-label">Mindfulness Exercises</div><h2 class="section-title">Simple Daily Practices</h2><p class="section-subtitle">Gentle exercises that take less than 10 minutes and can be done anywhere.</p></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <div style="background:white;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border)">
+        <div style="background:linear-gradient(135deg,var(--sage-light),var(--beige));height:120px;display:flex;align-items:center;justify-content:center;font-size:3rem">🌬️</div>
+        <div style="padding:24px"><h3 style="font-size:1rem;margin-bottom:8px">4-7-8 Breathing</h3><p style="font-size:0.85rem;color:var(--text-light);margin-bottom:16px">Inhale for 4 counts, hold for 7, exhale for 8. Repeat 3 times. Instantly calms the nervous system.</p><span style="font-size:0.78rem;color:var(--sage-dark);font-weight:600">⏱ 3 minutes</span></div>
+      </div>
+      <div style="background:white;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border)">
+        <div style="background:linear-gradient(135deg,var(--terracotta-light),var(--beige));height:120px;display:flex;align-items:center;justify-content:center;font-size:3rem">🙏</div>
+        <div style="padding:24px"><h3 style="font-size:1rem;margin-bottom:8px">Gratitude Journaling</h3><p style="font-size:0.85rem;color:var(--text-light);margin-bottom:16px">Write 3 things you're grateful for every morning. A simple practice that rewires the brain toward positivity.</p><span style="font-size:0.78rem;color:var(--sage-dark);font-weight:600">⏱ 5 minutes</span></div>
+      </div>
+      <div style="background:white;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border)">
+        <div style="background:linear-gradient(135deg,var(--beige-dark),var(--soft-brown));height:120px;display:flex;align-items:center;justify-content:center;font-size:3rem;opacity:0.9">🌳</div>
+        <div style="padding:24px"><h3 style="font-size:1rem;margin-bottom:8px">5-4-3-2-1 Grounding</h3><p style="font-size:0.85rem;color:var(--text-light);margin-bottom:16px">Notice 5 things you see, 4 you feel, 3 you hear, 2 you smell, 1 you taste. An instant anxiety buster.</p><span style="font-size:0.78rem;color:var(--sage-dark);font-weight:600">⏱ 5 minutes</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter CTA -->
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="section-label" style="background:rgba(255,255,255,0.15);color:white;margin:0 auto 16px">✦ Stay Informed</div>
+      <h2>Get Weekly Wellness Tips</h2>
+      <p>Join 8,000+ families receiving free screen-free activity ideas, mindfulness guides, and parenting tips every week.</p>
+      <form class="newsletter-form" onsubmit="return false;">
+        <input type="email" placeholder="Enter your email..." required />
+        <button type="submit" class="btn btn-terracotta">Subscribe Free →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo-wrap"><div class="logo-icon">🌿</div><span>Mindful Crafts</span></div><p>Helping families reduce screen time through mindful creativity.</p><div class="tagline">"Less Screen. More Life."</div></div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All Products</a></li></ul></div>
+      <div class="footer-col"><h4>Explore</h4><ul><li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 Mindful Crafts. Made with <span class="heart">❤️</span> in India.</p></div>
+  </div>
+</footer>
+<div class="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer">
+  <div class="cart-head"><h3>🛒 Your Cart</h3><button class="cart-close" onclick="closeCart()">×</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-foot"><div class="cart-total"><span>Total</span><span class="cart-total-amount">₹0</span></div><button class="btn btn-primary" style="width:100%;justify-content:center">Checkout →</button></div>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
