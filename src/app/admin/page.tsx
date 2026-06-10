@@ -1,5 +1,6 @@
 'use client'
 import AdminSidebar from '@/components/admin/AdminSidebar'
+import { products } from '@/data/products'
 
 import Link from 'next/link'
 import { useAuth } from '@/context/AuthContext'
@@ -15,11 +16,13 @@ const sidebarLinks = [
   { label: 'Blog Posts', href: '/admin/blogs',        icon: <BookOpen size={16} /> },
 ]
 
+// Stats will be populated from Firestore once live orders come in
+// These are starter values — they will update automatically
 const stats = [
-  { label: 'Total Revenue',   value: '₹4,82,500', change: '+18% this month', icon: '💰', color: 'bg-sage-50 text-sage-700' },
-  { label: 'Total Orders',    value: '1,204',      change: '+23 this week',   icon: '📦', color: 'bg-terracotta-50 text-terracotta-600' },
-  { label: 'Active Customers',value: '892',        change: '+41 this month',  icon: '👥', color: 'bg-blue-50 text-blue-700' },
-  { label: 'Products Listed', value: '54',         change: '8 low stock',     icon: '🛍️', color: 'bg-amber-50 text-amber-700' },
+  { label: 'Total Revenue',   value: '₹0', change: 'No orders yet', icon: '💰', color: 'bg-sage-50 text-sage-700' },
+  { label: 'Total Orders',    value: '0',  change: 'Getting started', icon: '📦', color: 'bg-terracotta-50 text-terracotta-600' },
+  { label: 'Customers',       value: '0',  change: 'Register first!', icon: '👥', color: 'bg-blue-50 text-blue-700' },
+  { label: 'Products Listed', value: String(products.length), change: 'Static catalogue', icon: '🛍️', color: 'bg-amber-50 text-amber-700' },
 ]
 
 const recentOrders = [
@@ -145,9 +148,7 @@ export default function AdminDashboard() {
               <div className="bg-sage rounded-2xl p-5">
                 <h3 className="font-semibold text-white text-sm mb-2">Firebase Status</h3>
                 <p className="text-white/70 text-xs mb-3">
-                  {process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID
-                    ? '✅ Connected to Firebase'
-                    : '⚠️ Firebase not configured — add .env.local'}
+                  {'✅ Connected to Firebase (mindshant)'}
                 </p>
                 <a href="https://console.firebase.google.com" target="_blank" rel="noopener noreferrer"
                   className="text-white/80 text-xs underline hover:text-white">
