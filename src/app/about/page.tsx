@@ -17,9 +17,9 @@ export default function AboutPage() {
   ]
 
   const team = [
-    { name: 'Jyoti', role: 'Founder & CEO', emoji: '👩', bio: 'Former educator and parent of two. Passionate about child development and digital wellness.' },
-    { name: 'Priya Nair', role: 'Head of Product Design', emoji: '👩‍🎨', bio: 'Art therapist and craft expert with 8 years designing educational creative materials.' },
-    { name: 'Rohan Sharma', role: 'Head of Technology', emoji: '👨‍💻', bio: 'Full-stack developer passionate about building meaningful digital experiences for conscious brands.' },
+    { name: 'Jyoti', role: 'Founder & CEO', emoji: '👩', bio: 'Educator, parent, and mindfulness enthusiast. Started MindShant to help her own family reduce screen time and rediscover creativity together.' },
+    { name: 'Join Our Team', role: 'Product Designer — Open Role', emoji: '✨', bio: 'We are looking for a creative product designer who is passionate about wellness, education, and hands-on learning.' },
+    { name: 'Join Our Team', role: 'Community Manager — Open Role', emoji: '🌱', bio: 'Are you passionate about mindful living and family wellness? We would love to hear from you.' },
   ]
 
   return (
@@ -56,7 +56,7 @@ export default function AboutPage() {
                 The response was overwhelming. Neighbours asked where to buy the kits. What started as a personal solution became a movement.
               </p>
               <p className="text-sm text-brown/65 leading-relaxed">
-                Today, MindShant has helped over 12,000 families across India reclaim their evenings, rediscover creativity, and build deeper connections — one craft kit at a time.
+                MindShant is on a mission to help families across India reclaim screen-free time through creativity, mindfulness, and meaningful offline experiences.
               </p>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function AboutPage() {
       <section className="py-16 bg-brown-dark">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[['12,000+','Happy Families'],['50+','Craft Kits'],['4.9★','Average Rating'],['28','States Served']].map(([v, l], i) => (
+            {[['9+','Craft Kits'],['100%','Natural Materials'],['30-Day','Happiness Guarantee'],['Pan-India','Shipping']].map(([v, l], i) => (
               <div key={i}>
                 <div className="font-playfair font-bold text-3xl text-sage-300 mb-1">{v}</div>
                 <div className="text-white/60 text-sm">{l}</div>
