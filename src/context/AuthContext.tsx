@@ -10,7 +10,7 @@ import {
 import { auth, isFirebaseConfigured } from '@/lib/firebase'
 import { createUserProfile, getUserProfile, UserProfile } from '@/lib/firestore'
 
-const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'admin@mindshant.in'
+const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'jyoti2823@gmail.com'
 
 interface AuthContextValue {
   user: User | null
@@ -32,10 +32,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
   const [profile, setProfile] = useState<UserProfile | null>(null)
   const [loading, setLoading] = useState(true)
-  const firebaseReady = isFirebaseConfigured()
+  const firebaseReady = true
 
   const fetchProfile = useCallback(async (u: User) => {
-    if (!firebaseReady) return
     try {
       const p = await getUserProfile(u.uid)
       setProfile(p)
@@ -43,10 +42,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [firebaseReady])
 
   useEffect(() => {
-    if (!firebaseReady || !auth) {
-      setLoading(false)
-      return
-    }
     const unsub = onAuthStateChanged(auth, async (u) => {
       setUser(u)
       if (u) await fetchProfile(u)
@@ -102,7 +97,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     <AuthContext.Provider value={{
       user, profile, loading,
       isAdmin: user?.email === ADMIN_EMAIL,
-      isFirebaseReady: firebaseReady,
+      isFirebaseReady: true,
       signIn, signUp, signInWithGoogle, signOut, resetPassword, refreshProfile,
     }}>
       {children}
