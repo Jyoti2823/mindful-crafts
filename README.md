@@ -2,7 +2,7 @@
 
 > **Mind + Shant (Peaceful Mind)** — A wellness and creativity platform helping children and adults reduce screen addiction through mindful, hands-on creative activities.
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-jyoti2823.github.io/mindful--crafts-sage?style=for-the-badge)](https://jyoti2823.github.io/mindful-crafts/)
+[![Live Site](https://img.shields.io/badge/Live%20Site-jyoti2823.github.io/mindshant-sage?style=for-the-badge)](https://jyoti2823.github.io/mindshant/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 ---
@@ -20,7 +20,7 @@ MindShant is a launch-ready **wellness + e-commerce + education platform** combi
 
 ## 🌐 Live Website
 
-**[https://jyoti2823.github.io/mindful-crafts/](https://jyoti2823.github.io/mindful-crafts/)**
+**[https://jyoti2823.github.io/mindshant/](https://jyoti2823.github.io/mindshant/)**
 
 | Page | URL |
 |------|-----|
@@ -112,8 +112,8 @@ mindful-crafts/
 
 ```bash
 # Clone the repository
-git clone https://github.com/Jyoti2823/mindful-crafts.git
-cd mindful-crafts
+git clone https://github.com/Jyoti2823/mindshant.git
+cd mindshant
 
 # Open in browser (no build step required)
 open index.html
