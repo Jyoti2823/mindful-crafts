@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ShoppingCart, Menu, X, Search, User, LogOut, LayoutDashboard, Package } from 'lucide-react'
 import { useCart } from '@/context/CartContext'
+import SearchModal from '@/components/ui/SearchModal'
 import { useAuth } from '@/context/AuthContext'
 import { cn } from '@/lib/utils'
 
@@ -21,6 +22,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [userMenuOpen, setUserMenuOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
   const pathname = usePathname()
   const { totalItems, openCart } = useCart()
   const { user, isAdmin, signOut, loading } = useAuth()
@@ -43,6 +45,7 @@ export default function Navbar() {
   }, [])
 
   return (
+    <>
     <header className={cn(
       'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
       scrolled ? 'bg-cream/95 backdrop-blur-md shadow-navbar border-b border-beige-400'
@@ -66,7 +69,7 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <button className="hidden sm:flex w-9 h-9 rounded-full bg-beige items-center justify-center text-brown hover:bg-sage-100 hover:text-sage transition-all" aria-label="Search">
+            <button onClick={() => setSearchOpen(true)} className="hidden sm:flex w-9 h-9 rounded-full bg-beige items-center justify-center text-brown hover:bg-sage-100 hover:text-sage transition-all" aria-label="Search">
               <Search size={16} />
             </button>
             <button onClick={openCart}
@@ -150,5 +153,7 @@ export default function Navbar() {
         </div>
       )}
     </header>
+    <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+    </>
   )
 }
