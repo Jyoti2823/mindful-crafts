@@ -50,9 +50,18 @@ export default function AdminBlogs() {
     setShowForm(true)
   }
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!form.title || !form.excerpt) return
     const now = new Date().toISOString().split('T')[0]
+    try {
+      if (editing) {
+        const { updateBlog } = await import('@/lib/firestore')
+        await updateBlog(editing.id, { title: form.title, excerpt: form.excerpt, category: form.category, emoji: form.emoji, readTime: Number(form.readTime), tags: form.tags.split(',').map(t=>t.trim()).filter(Boolean), featured: form.featured })
+      } else {
+        const { addBlog } = await import('@/lib/firestore')
+        await addBlog({ slug: form.title.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,''), title: form.title, excerpt: form.excerpt, category: form.category, emoji: form.emoji, bgGradient: 'from-sage-200 to-beige-300', author: { name: 'MindShant Team', role: 'Wellness Experts', emoji: '🌿' }, publishedAt: now, readTime: Number(form.readTime), tags: form.tags.split(',').map(t=>t.trim()).filter(Boolean), featured: form.featured, views: 0 })
+      }
+    } catch { /* Firestore not yet set up */ }
     if (editing) {
       setPosts(prev => prev.map(p => p.id === editing.id ? {
         ...p, title: form.title, excerpt: form.excerpt, category: form.category,
