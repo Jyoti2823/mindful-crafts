@@ -120,7 +120,7 @@ export function Mission() {
               Less Screen.<br /><em className="not-italic text-sage">More Life.</em>
             </h2>
             <p className="text-brown/65 mb-4 leading-relaxed">
-              We built MindShant — combining <strong>Mind</strong> and <strong>Shant</strong> (the Sanskrit word for peaceful) — because we believe creativity is the antidote to screen addiction.
+              We built MindShant — combining <strong>Mind</strong> and <strong>Shant</strong> (Sanskrit for peaceful) — because we believe creativity is the antidote to screen addiction. We are a new brand with a big mission.
             </p>
             <p className="text-sm text-brown/55 leading-relaxed mb-8">
               Our kits bring families together, calm anxious minds, and spark the joy of making something real with your hands. Every product is thoughtfully curated to promote mindfulness, cognitive development, and emotional wellness.
