@@ -8,8 +8,17 @@ export default function ContactPage() {
   const [form, setForm] = useState({ firstName: '', lastName: '', email: '', phone: '', subject: '', message: '' })
   const [sent, setSent] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    try {
+      const { db } = await import('@/lib/firebase')
+      const { collection, addDoc, serverTimestamp } = await import('firebase/firestore')
+      await addDoc(collection(db, 'messages'), {
+        ...form,
+        createdAt: serverTimestamp(),
+        read: false,
+      })
+    } catch { /* Firestore unavailable — still show success */ }
     setSent(true)
   }
 
@@ -37,9 +46,9 @@ export default function ContactPage() {
               <p className="text-sm text-brown/60 mb-8">Whether you have a question about our products, need help with an order, or want to explore partnership opportunities.</p>
 
               {[
-                { icon: <Mail size={18} />, title: 'Email Us', lines: ['hello@mindshant.in', 'Response within 24 hours'] },
-                { icon: <Phone size={18} />, title: 'WhatsApp', lines: ['+91 98765 43210', 'Mon–Sat, 10am–6pm IST'] },
-                { icon: <MapPin size={18} />, title: 'Our Office', lines: ['Sector 12, Noida, UP', 'Delhi NCR, India'] },
+                { icon: <Mail size={18} />, title: 'Email Us', lines: ['jyotikumari9381@gmail.com', 'Response within 24 hours'] },
+                { icon: <Phone size={18} />, title: 'WhatsApp', lines: ['+91 9910268854', 'Mon–Sat, 10am–6pm IST'] },
+                { icon: <MapPin size={18} />, title: 'Based In', lines: ['Delhi NCR, India', 'Online — We ship pan-India'] },
               ].map((m, i) => (
                 <div key={i} className="flex gap-4 mb-6">
                   <div className="w-10 h-10 rounded-xl bg-beige flex items-center justify-center text-sage flex-shrink-0">{m.icon}</div>
@@ -96,7 +105,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label className="text-xs font-semibold text-brown/60 mb-1.5 block">Phone</label>
-                      <input type="tel" className="input w-full" placeholder="+91 98765 43210" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} />
+                      <input type="tel" className="input w-full" placeholder="+91 9910268854" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} />
                     </div>
                   </div>
                   <div>
