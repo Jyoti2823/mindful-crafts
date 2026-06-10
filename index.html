@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mindful Crafts — Less Screen. More Life.</title>
+  <meta name="description" content="Mindful DIY kits and creative activities designed for children and adults who want a healthier relationship with technology. Reduce screen time, reconnect with creativity." />
+  <meta name="keywords" content="mindful crafts, DIY kits, screen time, children activities, mindfulness, wellness crafts" />
+  <meta property="og:title" content="Mindful Crafts — Less Screen. More Life." />
+  <meta property="og:description" content="Reduce screen time. Reconnect with creativity through mindful DIY kits." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://jyoti2823.github.io/mindful-crafts/" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+</head>
+<body>
+
+<!-- ── NAVBAR ──────────────────────────────── -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">🌿</div>
+      <span>Mindful <em>Crafts</em></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="blog.html">Blog</a>
+      <a href="wellness.html">Wellness</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" title="Search">🔍</button>
+      <button class="nav-icon-btn" title="Open cart" onclick="openCart()">
+        🛒 <span class="cart-count" style="display:none">0</span>
+      </button>
+      <a href="shop.html" class="btn btn-primary btn-sm">Shop Now</a>
+    </div>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────── -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">India's #1 Screen-Free Activity Brand</div>
+        <h1>Reduce Screen Time.<br><span>Reconnect With</span><br>Creativity.</h1>
+        <p>Mindful DIY kits and creative activities designed for children and adults who want a healthier, more meaningful relationship with technology.</p>
+        <div class="hero-ctas">
+          <a href="shop.html" class="btn btn-primary btn-lg">🛍️ Shop Now</a>
+          <a href="wellness.html" class="btn btn-outline btn-lg">🌱 Explore Activities</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>12,000+</strong><span>Happy Families</span></div>
+          <div class="hero-stat"><strong>50+</strong><span>Craft Kits</span></div>
+          <div class="hero-stat"><strong>4.9★</strong><span>Average Rating</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card-main">
+          <div class="hero-img-placeholder">🎨</div>
+          <div class="hero-card-info">
+            <div>
+              <h4>DIY Flower Casting Kit</h4>
+              <p>Best Seller • Age 6+</p>
+            </div>
+            <span class="price">₹849</span>
+          </div>
+        </div>
+        <div class="hero-floating f1">
+          <span class="float-icon">⭐</span>
+          <div><strong>Loved by Parents</strong><small>4.9/5 from 3,200 reviews</small></div>
+        </div>
+        <div class="hero-floating f2">
+          <span class="float-icon">📦</span>
+          <div><strong>Free Shipping</strong><small>On orders above ₹999</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MARQUEE ────────────────────────────── -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">🎨 DIY Craft Kits</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">🌿 Mindfulness Activities</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">👨‍👩‍👧 Family Bonding</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">📵 Screen-Free Fun</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">🏺 Pottery & Casting</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">📓 Mindfulness Journals</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">🐾 Animal Craft Kits</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">🎨 DIY Craft Kits</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">🌿 Mindfulness Activities</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">👨‍👩‍👧 Family Bonding</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">📵 Screen-Free Fun</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">🏺 Pottery & Casting</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">📓 Mindfulness Journals</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">🐾 Animal Craft Kits</span><span class="marquee-dot">•</span>
+  </div>
+</div>
+
+<!-- ── MISSION ───────────────────────────── -->
+<section class="mission" id="mission">
+  <div class="container">
+    <div class="mission-inner">
+      <div class="mission-img-wrap">
+        <div class="mission-img-placeholder">🌸</div>
+        <div class="mission-quote">
+          <p>"Every craft kit we send is a moment of screen-free joy — a memory worth keeping."</p>
+          <span>— Jyoti, Founder of Mindful Crafts</span>
+        </div>
+      </div>
+      <div class="mission-text">
+        <div class="section-label">Our Mission</div>
+        <h2 class="section-title">Less Screen.<br>More <em>Life.</em></h2>
+        <p style="color:var(--text-light);margin-bottom:20px;font-size:1.02rem;">We started Mindful Crafts because we believe that creativity is the antidote to screen addiction. Our kits bring families together, calm anxious minds, and spark the joy of making something real with your hands.</p>
+        <p style="color:var(--text-light);font-size:0.92rem;">Every product is thoughtfully curated to promote mindfulness, cognitive development, and emotional wellness — for children and adults alike.</p>
+        <div class="mission-values">
+          <div class="value-card"><div class="icon">🧘</div><h4>Mindfulness</h4><p>Cultivate calm and presence through creative flow.</p></div>
+          <div class="value-card"><div class="icon">👨‍👩‍👧</div><h4>Family Bonding</h4><p>Activities that bring loved ones closer together.</p></div>
+          <div class="value-card"><div class="icon">🌱</div><h4>Well-being</h4><p>Reduce stress, anxiety, and screen dependency.</p></div>
+          <div class="value-card"><div class="icon">✨</div><h4>Creativity</h4><p>Unlock imagination and self-expression at every age.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BENEFITS ──────────────────────────── -->
+<section class="benefits" id="benefits">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-label">Why It Matters</div>
+      <h2 class="section-title">The Power of Screen-Free Activities</h2>
+      <p class="section-subtitle">Science-backed benefits of hands-on creative activities for mental and emotional health.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🧠</div>
+        <h3>Boosts Cognitive Development</h3>
+        <p>Hands-on crafts enhance fine motor skills, spatial reasoning, and problem-solving — especially critical in early childhood development.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">😌</div>
+        <h3>Reduces Stress & Anxiety</h3>
+        <p>Creative activities trigger a meditative state, lowering cortisol levels and promoting deep relaxation in both children and adults.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📵</div>
+        <h3>Breaks Screen Addiction</h3>
+        <p>Engaging offline alternatives reduce screen time naturally — without conflict or restriction. Kids choose crafts over devices.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">👨‍👩‍👧</div>
+        <h3>Strengthens Family Bonds</h3>
+        <p>Shared creative experiences create lasting memories and open communication channels between parents and children.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🏆</div>
+        <h3>Builds Confidence & Pride</h3>
+        <p>Completing a creative project gives children (and adults) a powerful sense of accomplishment and self-worth.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🎯</div>
+        <h3>Improves Focus & Attention</h3>
+        <p>Regular craft practice trains the brain to sustain attention — a skill increasingly rare in the age of digital distraction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURED PRODUCTS ─────────────────── -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-header" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <div>
+        <div class="section-label">Our Products</div>
+        <h2 class="section-title mb-0">Featured Craft Kits</h2>
+      </div>
+      <a href="shop.html" class="btn btn-outline">View All Products →</a>
+    </div>
+    <div class="products-tabs">
+      <button class="tab-btn active">All</button>
+      <button class="tab-btn">DIY Kits</button>
+      <button class="tab-btn">Journals</button>
+      <button class="tab-btn">Family Kits</button>
+      <button class="tab-btn">Paint & Create</button>
+    </div>
+    <div class="products-grid">
+      <div class="product-card" onclick="location.href='product.html'">
+        <div class="product-img">🌺<div class="product-badge">Best Seller</div><button class="product-wishlist">♡</button></div>
+        <div class="product-info">
+          <div class="product-category">DIY Casting Kit</div>
+          <h3 class="product-name">DIY Flower Casting Kit</h3>
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(312 reviews)</span></div>
+          <div class="product-footer">
+            <span class="product-price"><del>₹1,199</del> ₹849</span>
+            <button class="add-cart" onclick="event.stopPropagation();addToCart('DIY Flower Casting Kit',849,'🌺')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card" onclick="location.href='product.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#ddb99a,#f0d4bc)">🐾<div class="product-badge">New</div><button class="product-wishlist">♡</button></div>
+        <div class="product-info">
+          <div class="product-category">Animal Craft Kit</div>
+          <h3 class="product-name">Safari Animal Craft Kit</h3>
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(186 reviews)</span></div>
+          <div class="product-footer">
+            <span class="product-price">₹749</span>
+            <button class="add-cart" onclick="event.stopPropagation();addToCart('Safari Animal Craft Kit',749,'🐾')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card" onclick="location.href='product.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#c8b4a8,#e0d0c8)">🎨<button class="product-wishlist">♡</button></div>
+        <div class="product-info">
+          <div class="product-category">Paint & Create</div>
+          <h3 class="product-name">Watercolour Zen Kit</h3>
+          <div class="product-rating"><span class="stars">★★★★☆</span><span class="rating-count">(94 reviews)</span></div>
+          <div class="product-footer">
+            <span class="product-price"><del>₹1,099</del> ₹799</span>
+            <button class="add-cart" onclick="event.stopPropagation();addToCart('Watercolour Zen Kit',799,'🎨')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card" onclick="location.href='product.html'">
+        <div class="product-img" style="background:linear-gradient(135deg,#b8d4b4,#d4ead0)">📓<div class="product-badge" style="background:var(--sage)">Popular</div><button class="product-wishlist">♡</button></div>
+        <div class="product-info">
+          <div class="product-category">Mindfulness Journal</div>
+          <h3 class="product-name">Daily Mindfulness Journal</h3>
+          <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(428 reviews)</span></div>
+          <div class="product-footer">
+            <span class="product-price">₹499</span>
+            <button class="add-cart" onclick="event.stopPropagation();addToCart('Daily Mindfulness Journal',499,'📓')">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="products-cta">
+      <a href="shop.html" class="btn btn-primary btn-lg">Browse All 50+ Kits →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ──────────────────────── -->
+<section class="how-it-works" id="how">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">From Our Studio to Your Home</h2>
+      <p class="section-subtitle">Getting started with mindful creativity is simple. Here's how it works.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-icon">🛍️</div>
+        <h3>Choose Your Kit</h3>
+        <p>Browse our curated collection of craft kits designed for different ages and interests.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-icon">📦</div>
+        <h3>We Ship Fast</h3>
+        <p>Your kit is carefully packed and delivered to your doorstep within 3–5 business days.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-icon">🎨</div>
+        <h3>Create & Enjoy</h3>
+        <p>Follow our easy step-by-step guides and enjoy quality screen-free creative time.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-icon">🌟</div>
+        <h3>Share Your Art</h3>
+        <p>Join our community, share your creations, and inspire thousands of other families.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY CHOOSE US ─────────────────────── -->
+<section class="why-us">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-img">🏡</div>
+      <div>
+        <div class="section-label">Why Mindful Crafts</div>
+        <h2 class="section-title">Crafted With Purpose,<br>Delivered With Love</h2>
+        <p style="color:var(--text-light);font-size:0.95rem;margin-bottom:8px">We're not just selling craft kits. We're building a movement toward a calmer, more creative, more connected world.</p>
+        <div class="why-list">
+          <div class="why-item"><div class="why-check">✓</div><div><h4>Expert-Curated Kits</h4><p>Designed by child development experts, educators, and mindfulness coaches.</p></div></div>
+          <div class="why-item"><div class="why-check">✓</div><div><h4>All Materials Included</h4><p>Everything you need is in the box — no extra shopping required.</p></div></div>
+          <div class="why-item"><div class="why-check">✓</div><div><h4>Safe & Non-Toxic</h4><p>All materials are child-safe, eco-friendly, and certified non-toxic.</p></div></div>
+          <div class="why-item"><div class="why-check">✓</div><div><h4>Easy Step-by-Step Guides</h4><p>Illustrated instructions make every project approachable for all skill levels.</p></div></div>
+          <div class="why-item"><div class="why-check">✓</div><div><h4>30-Day Happiness Guarantee</h4><p>Not happy? We'll make it right — no questions asked.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ──────────────────────── -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-label">Reviews</div>
+      <h2 class="section-title">Loved by 12,000+ Families</h2>
+      <p class="section-subtitle">Real stories from real families who've chosen creativity over screens.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">My 8-year-old daughter used to spend 5+ hours on her tablet every day. Since we started Mindful Crafts kits, she asks for craft time instead of screen time. It's absolutely transformed our evenings.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩</div>
+          <div><div class="testi-name">Priya Sharma</div><div class="testi-role">Mother of 2 · Mumbai</div><div class="testi-stars">★★★★★</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">As a working professional dealing with burnout, the mindfulness journal and clay kits have become my Sunday ritual. I look forward to it all week. The quality is exceptional.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👨</div>
+          <div><div class="testi-name">Arjun Mehta</div><div class="testi-role">Software Engineer · Bengaluru</div><div class="testi-stars">★★★★★</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">I ordered the family activity kit for our weekend. We spent 3 hours crafting together — no phones, just laughing and creating. My kids are still talking about it two weeks later!</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩</div>
+          <div><div class="testi-name">Ananya Krishnan</div><div class="testi-role">Parent · Chennai</div><div class="testi-stars">★★★★★</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── NEWSLETTER ────────────────────────── -->
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="section-label" style="background:rgba(255,255,255,0.15);color:white;margin:0 auto 16px">✦ Join Our Community</div>
+      <h2>Get Free Mindfulness Tips & Exclusive Offers</h2>
+      <p>Join 8,000+ families receiving weekly screen-free activity ideas, parenting tips, and early access to new kits.</p>
+      <form class="newsletter-form" onsubmit="return false;">
+        <input type="email" placeholder="Enter your email address..." required />
+        <button type="submit" class="btn btn-terracotta">Subscribe Free →</button>
+      </form>
+      <div class="newsletter-perks">
+        <span class="newsletter-perk">No spam, ever</span>
+        <span class="newsletter-perk">Unsubscribe anytime</span>
+        <span class="newsletter-perk">Free activity guide on signup</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BLOG HIGHLIGHTS ───────────────────── -->
+<section class="blog" id="blog">
+  <div class="container">
+    <div class="section-header" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <div>
+        <div class="section-label">Mindful Living Blog</div>
+        <h2 class="section-title mb-0">Insights for Screen-Free Living</h2>
+      </div>
+      <a href="blog.html" class="btn btn-outline">Read All Articles →</a>
+    </div>
+    <div class="blog-grid">
+      <a href="blog.html" class="blog-card">
+        <div class="blog-img">📵</div>
+        <div class="blog-body">
+          <span class="blog-tag">Digital Detox</span>
+          <h3 class="blog-title">7 Signs Your Child May Have a Screen Addiction (And What To Do)</h3>
+          <p class="blog-excerpt">Learn to identify the warning signs of screen dependency in children and discover gentle, effective strategies to restore balance.</p>
+          <div class="blog-meta"><span>📅 June 5, 2025</span><span>⏱ 5 min read</span></div>
+          <div class="read-more">Read Article →</div>
+        </div>
+      </a>
+      <a href="blog.html" class="blog-card">
+        <div class="blog-img">🧘</div>
+        <div class="blog-body">
+          <span class="blog-tag">Mindfulness</span>
+          <h3 class="blog-title">How 20 Minutes of Crafting Can Transform Your Mental Health</h3>
+          <p class="blog-excerpt">Science shows that creative activities activate the brain's reward system. Here's how craft therapy is changing lives.</p>
+          <div class="blog-meta"><span>📅 May 28, 2025</span><span>⏱ 4 min read</span></div>
+          <div class="read-more">Read Article →</div>
+        </div>
+      </a>
+      <a href="blog.html" class="blog-card">
+        <div class="blog-img">👨‍👩‍👧</div>
+        <div class="blog-body">
+          <span class="blog-tag">Family Activities</span>
+          <h3 class="blog-title">10 Weekend Activities for Families That Don't Involve Screens</h3>
+          <p class="blog-excerpt">Fun, affordable, and screen-free activities you can do at home this weekend that the whole family will love.</p>
+          <div class="blog-meta"><span>📅 May 20, 2025</span><span>⏱ 6 min read</span></div>
+          <div class="read-more">Read Article →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ───────────────────────────────── -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">What age groups are the kits suitable for? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">We have kits for all ages! Our children's kits are designed for ages 5–15, with age-appropriate complexity and safety. We also offer kits specifically for adults and working professionals looking for mindful creative activities.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How long does shipping take? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">We ship across India within 3–5 business days. Metro cities like Mumbai, Delhi, Bengaluru, and Chennai typically receive orders in 2–3 days. We offer free shipping on all orders above ₹999.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are the materials safe for children? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Absolutely! All our materials are certified non-toxic, child-safe, and eco-friendly. We comply with BIS (Bureau of Indian Standards) safety standards and have our products independently tested.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Can I return or exchange a product? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Yes! We offer a 30-day happiness guarantee. If you're not completely satisfied, contact us within 30 days of delivery and we'll arrange a return, exchange, or full refund — no questions asked.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you offer subscription boxes? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Yes! Our monthly subscription box delivers a new curated craft kit to your door every month. Subscribers get 20% off every box, free shipping, and early access to new products. Coming soon — sign up to our newsletter to be notified!</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How do I track my order? <span class="faq-icon">+</span></div>
+        <div class="faq-answer">Once your order ships, you'll receive a confirmation email with a tracking link. You can also track your order by logging into your account on our website or by contacting our support team.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-icon">🌿</div>
+          <span>Mindful Crafts</span>
+        </div>
+        <p>Helping families reduce screen time through the joy of hands-on creativity, mindfulness, and meaningful offline experiences.</p>
+        <div class="tagline">"Less Screen. More Life."</div>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" title="Instagram">📸</a>
+          <a href="#" class="social-btn" title="Facebook">👥</a>
+          <a href="#" class="social-btn" title="YouTube">▶️</a>
+          <a href="#" class="social-btn" title="Pinterest">📌</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Products</a></li>
+          <li><a href="shop.html">DIY Craft Kits</a></li>
+          <li><a href="shop.html">Family Kits</a></li>
+          <li><a href="shop.html">Mindfulness Journals</a></li>
+          <li><a href="shop.html">Paint & Create</a></li>
+          <li><a href="shop.html">Gift Sets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="wellness.html">Wellness Resources</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">Workshops (Soon)</a></li>
+          <li><a href="#">Community (Soon)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Order Tracking</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="contact.html">Help Center</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Mindful Crafts. Made with <span class="heart">❤️</span> in India.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── CART DRAWER ──────────────────────── -->
+<div class="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer">
+  <div class="cart-head">
+    <h3>🛒 Your Cart</h3>
+    <button class="cart-close" onclick="closeCart()">×</button>
+  </div>
+  <div class="cart-items"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Total</span><span class="cart-total-amount">₹0</span></div>
+    <a href="shop.html" class="btn btn-primary" style="width:100%;justify-content:center" onclick="closeCart()">Proceed to Checkout →</a>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
