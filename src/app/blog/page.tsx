@@ -56,7 +56,7 @@ export default function BlogPage() {
                     <span>⏱ {featured.readTime} min</span>
                     <span>👁 {featured.views?.toLocaleString()}</span>
                   </div>
-                  <Link href={`/blog`} className="btn-primary btn-sm w-fit">Read Article →</Link>
+                  <Link href={`/blog/${featured.slug}`} className="btn-primary btn-sm w-fit">Read Article →</Link>
                 </div>
               </div>
             )}
@@ -64,7 +64,7 @@ export default function BlogPage() {
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {rest.map((post) => (
-                <Link key={post.id} href="/blog" className="card overflow-hidden group block">
+                <Link key={post.id} href={`/blog/${post.slug}`} className="card overflow-hidden group block">
                   <div className={cn('h-44 bg-gradient-to-br flex items-center justify-center text-5xl', post.bgGradient)}>
                     {post.emoji}
                   </div>
@@ -94,7 +94,7 @@ export default function BlogPage() {
             <div className="bg-white rounded-2xl p-5 border border-beige-400">
               <h4 className="text-xs font-bold uppercase tracking-wider text-brown/60 mb-4">Popular Posts</h4>
               {blogPosts.slice(0, 3).map((p, i) => (
-                <Link key={i} href="/blog" className="flex gap-3 mb-4 last:mb-0 hover:opacity-80 transition-opacity">
+                <Link key={i} href={`/blog/${p.slug}`} className="flex gap-3 mb-4 last:mb-0 hover:opacity-80 transition-opacity">
                   <div className={cn('w-12 h-12 rounded-lg bg-gradient-to-br flex items-center justify-center text-xl flex-shrink-0', p.bgGradient)}>
                     {p.emoji}
                   </div>
