@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts loaded via <link> in layout.tsx */
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', sans-serif;
+    --font-playfair: 'Playfair Display', serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans bg-cream text-brown-dark antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-playfair;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* ── Buttons ─────────────────────────── */
+  .btn {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm
+           cursor-pointer transition-all duration-300 border-2 border-transparent
+           whitespace-nowrap font-sans select-none;
+  }
+  .btn-primary {
+    @apply btn bg-sage text-white border-sage hover:bg-sage-600 hover:border-sage-600
+           hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(124,154,114,0.4)];
+  }
+  .btn-outline {
+    @apply btn bg-transparent text-sage border-sage
+           hover:bg-sage hover:text-white hover:-translate-y-0.5;
+  }
+  .btn-terracotta {
+    @apply btn bg-terracotta text-white border-terracotta
+           hover:bg-terracotta-600 hover:-translate-y-0.5
+           hover:shadow-[0_8px_25px_rgba(201,123,90,0.4)];
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-brown hover:bg-beige-300 border-transparent;
+  }
+  .btn-sm {
+    @apply px-5 py-2.5 text-xs;
+  }
+  .btn-lg {
+    @apply px-9 py-4.5 text-base;
+  }
+
+  /* ── Section Label ───────────────────── */
+  .section-label {
+    @apply inline-flex items-center gap-2 bg-beige text-sage-600 px-4 py-1.5
+           rounded-full text-xs font-bold uppercase tracking-widest mb-4;
+  }
+  .section-label::before {
+    content: '✦';
+    @apply text-terracotta;
+  }
+
+  /* ── Section Header ──────────────────── */
+  .section-title {
+    @apply font-playfair font-bold text-display-md text-brown-dark;
+  }
+  .section-subtitle {
+    @apply text-brown/70 text-base leading-relaxed max-w-xl;
+  }
+
+  /* ── Cards ───────────────────────────── */
+  .card {
+    @apply bg-white rounded-3xl border border-beige-400 shadow-card
+           transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1.5;
+  }
+
+  /* ── Badge ───────────────────────────── */
+  .product-badge {
+    @apply absolute top-3 left-3 text-white text-[10px] font-extrabold
+           px-2.5 py-1 rounded-full uppercase tracking-wider;
+  }
+
+  /* ── Toast ───────────────────────────── */
+  .toast {
+    @apply fixed bottom-6 right-6 bg-brown-dark text-white px-5 py-3.5
+           rounded-xl text-sm shadow-float z-50 flex items-center gap-3
+           transition-all duration-400;
+  }
+
+  /* ── Input ───────────────────────────── */
+  .input {
+    @apply border-[1.5px] border-beige-400 rounded-xl px-4 py-3 font-sans text-sm
+           outline-none transition-all duration-200 bg-cream text-brown-dark
+           focus:border-sage focus:bg-white;
+  }
+
+  /* ── Page Hero ───────────────────────── */
+  .page-hero {
+    @apply bg-gradient-to-br from-cream to-beige pt-28 pb-16 text-center;
+  }
+
+  /* ── Scrollbar ───────────────────────── */
+  ::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-beige;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-sage-300 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-sage;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .py-4\.5 {
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
+  }
+}
