@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and auth pages from indexing
+Disallow: /admin/
+Disallow: /auth/
+Disallow: /account/
+Disallow: /checkout/
+
+# Sitemap
+Sitemap: https://jyoti2823.github.io/mindshant/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 10
