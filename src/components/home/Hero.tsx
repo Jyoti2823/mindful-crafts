@@ -40,9 +40,9 @@ export default function Hero() {
           {/* Stats */}
           <div className="flex gap-8 flex-wrap">
             {[
-              { value: '12,000+', label: 'Happy Families' },
-              { value: '50+', label: 'Craft Kits' },
-              { value: '4.9★', label: 'Average Rating' },
+              { value: '9+', label: 'Craft Kits' },
+              { value: '100%', label: 'Natural Materials' },
+              { value: '30-Day', label: 'Happiness Guarantee' },
             ].map((s) => (
               <div key={s.label}>
                 <strong className="block font-playfair text-2xl font-bold text-brown-dark">
@@ -74,7 +74,7 @@ export default function Hero() {
             <Star size={20} className="text-amber-400 fill-amber-400" />
             <div>
               <p className="font-bold text-sm text-brown-dark">Loved by Parents</p>
-              <p className="text-xs text-brown/50">4.9/5 from 3,200 reviews</p>
+              <p className="text-xs text-brown/50">Quality you can trust</p>
             </div>
           </div>
 
